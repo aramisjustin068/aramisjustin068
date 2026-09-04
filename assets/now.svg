@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="44" viewBox="0 0 720 44" font-family="monospace">
+  <rect width="720" height="44" fill="#0d1117" rx="8"/>
+  <text x="16" y="29" fill="#7B42BC" font-size="16">$</text>
+  <g font-size="16" fill="#e6edf3">
+    <text x="36" y="29">terraform that still applies six months later
+      <animate attributeName="opacity" values="1;1;0;0;0;0;0;0;1" keyTimes="0;0.3;0.34;0.5;0.66;0.82;0.96;0.98;1" dur="12s" repeatCount="indefinite"/>
+    </text>
+    <text x="36" y="29">alerts without runbooks are noise with a pager
+      <animate attributeName="opacity" values="0;0;1;1;0;0;0;0;0" keyTimes="0;0.34;0.36;0.66;0.68;0.82;0.96;0.98;1" dur="12s" repeatCount="indefinite"/>
+    </text>
+    <text x="36" y="29">rollback before rollout, always
+      <animate attributeName="opacity" values="0;0;0;0;0;0;1;1;0" keyTimes="0;0.34;0.36;0.66;0.68;0.82;0.84;0.96;1" dur="12s" repeatCount="indefinite"/>
+    </text>
+  </g>
+  <rect x="690" y="14" width="10" height="16" fill="#326CE5">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
