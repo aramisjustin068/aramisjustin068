@@ -1,6 +1,19 @@
-# Amara Justin
+<p align="center">
+  <img src="https://raw.githubusercontent.com/aramisjustin068/aramisjustin068/main/assets/header.svg" alt="Amara Justin — DevOps / IaC Engineer" width="880"/>
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/aramisjustin068/aramisjustin068/main/assets/now.svg" alt="now" width="720"/>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat&logo=terraform&logoColor=white" height="22"/>
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white" height="22"/>
+  <img src="https://img.shields.io/badge/Helm-0F1689?style=flat&logo=helm&logoColor=white" height="22"/>
+  <img src="https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white" height="22"/>
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" height="22"/>
+  <img src="https://img.shields.io/badge/Prometheus-E6522D?style=flat&logo=prometheus&logoColor=white" height="22"/>
+</p>
 
-![Terraform](https://img.shields.io/badge/Terraform-623CE4?style=flat&logo=terraform&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white) ![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
+---
 
 Cloud and DevOps engineer based in Lyon, France. Most of my work is the
 unglamorous half of platform engineering: Terraform modules that still apply
@@ -11,7 +24,7 @@ Day to day that means a small platform team, one Kubernetes cluster per
 environment, and every infrastructure change arriving as a pull request with a
 plan attached.
 
-## Stack
+## What I work with
 
 **Infrastructure as code** — Terraform and Terragrunt for anything with a state
 file, Packer for images, Ansible for the legacy VMs that refuse to die.
@@ -31,7 +44,7 @@ in France.
 **Languages** — Go and Python for tooling, Bash when Bash is honestly enough,
 SQL more often than expected.
 
-## Selected work
+## A few things here
 
 **[tf-baseline](https://github.com/aramisjustin068/tf-baseline)** — A minimal,
 readable VPC module: three-tier network layout, optional NAT gateway, no wrapper
@@ -44,6 +57,22 @@ limits, Service, and a default-deny NetworkPolicy.
 **[incident-runbook](https://github.com/aramisjustin068/incident-runbook)** — The
 post-incident review template my team fills in the morning after, structured so
 the timeline gets written before anyone argues about the cause.
+
+**[helm-chart-skel](https://github.com/aramisjustin068/helm-chart-skel)** — The
+chart skeleton I start every new service with. Deployment and Service templates
+that read like they were written by someone who has been paged at 03:00, because
+they were. Values that default to sane resource limits, not to whatever the
+cloud provider hands you. It is not a library, it is a starting point you delete
+the parts you do not need from.
+
+**[sre-dashboard](https://github.com/aramisjustin068/sre-dashboard)** — A
+Grafana dashboard definition in JSON plus a Python validator that checks the
+panel structure before you import it. Built after watching someone push a
+dashboard with a broken panel target and not notice for two weeks. The
+validator runs in CI, not at 02:00 during an incident.
+
+None of these are frameworks. They are the small tools that survived contact
+with real incidents, which is a lower bar than it sounds and also a real one.
 
 ## How I work
 
@@ -66,6 +95,16 @@ the timeline gets written before anyone argues about the cause.
   about cardinality than any production cluster.
 - Everything in the lab is bootstrapped from the same Terraform and Ansible
   patterns I use at work, on purpose.
+
+## 📊 Activity
+
+<p align="center">
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=aramisjustin068&show_icons=true&theme=transparent&hide_border=true&count_private=true"/>
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aramisjustin068&layout=compact&theme=transparent&hide_border=true"/>
+</p>
+<p align="center">
+  <img width="720" src="https://github-readme-activity-graph.vercel.app/graph?username=aramisjustin068&theme=github-compact&hide_border=true&radius=8"/>
+</p>
 
 ## Contact
 
