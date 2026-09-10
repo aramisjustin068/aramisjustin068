@@ -1,93 +1,126 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="200" viewBox="0 0 880 200" font-family="'Segoe UI',-apple-system,system-ui,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 200" width="880" height="200">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0d1117"/><stop offset="1" stop-color="#161b22"/>
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
     </linearGradient>
-    <linearGradient id="tf" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#7B42BC"/><stop offset="1" stop-color="#5C2E91"/>
-    </linearGradient>
-    <linearGradient id="k8s" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#326CE5"/><stop offset="1" stop-color="#1F4FA8"/>
+    <linearGradient id="rollout" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6f42c1"/>
+      <stop offset="1" stop-color="#58a6a6"/>
     </linearGradient>
   </defs>
-  <rect width="880" height="200" fill="url(#bg)" rx="14"/>
-  <g stroke="#1f2630" stroke-width="1">
-    <line x1="0" y1="50" x2="880" y2="50"/><line x1="0" y1="100" x2="880" y2="100"/>
+
+  <rect width="880" height="200" fill="url(#bg)"/>
+
+  <!-- guide lines -->
+  <line x1="0" y1="32" x2="880" y2="32" stroke="#21262d" stroke-width="1"/>
+  <line x1="0" y1="172" x2="880" y2="172" stroke="#21262d" stroke-width="1"/>
+  <line x1="520" y1="32" x2="520" y2="172" stroke="#21262d" stroke-width="1"/>
+
+  <!-- meta labels -->
+  <text x="24" y="21" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#7d8590">&#x2387; main</text>
+  <text x="500" y="21" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#7d8590">ci: passing</text>
+  <text x="856" y="21" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#58a6a6">prod</text>
+  <text x="856" y="190" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10" fill="#7d8590">v1.4.2</text>
+
+  <!-- name & role -->
+  <text x="24" y="88" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="34" font-weight="600" fill="#e6edf3" letter-spacing="0.5">Amara Justin</text>
+  <text x="25" y="116" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#6f42c1" letter-spacing="3.5">PLATFORM / DEVOPS (IaC)</text>
+  <text x="25" y="146" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" fill="#7d8590">Terraform &#183; Kubernetes &#183; Helm &#183; ArgoCD &#183; OpenTelemetry</text>
+
+  <!-- git -> build -> deploy chain -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" fill="#7d8590" text-anchor="middle">
+    <circle cx="566" cy="60" r="4" fill="none" stroke="#58a6a6" stroke-width="1.2"/>
+    <circle cx="566" cy="60" r="1.5" fill="#58a6a6"/>
+    <text x="566" y="76">git</text>
+    <rect x="612" y="56" width="9" height="9" rx="1" fill="none" stroke="#6f42c1" stroke-width="1.2"/>
+    <text x="616" y="76">build</text>
+    <path d="M656 56 h8 l3 4 -3 4 h-8 z" fill="none" stroke="#58a6a6" stroke-width="1.2"/>
+    <text x="661" y="76">deploy</text>
+    <!-- arrows -->
+    <line x1="574" y1="60" x2="604" y2="60" stroke="#21262d" stroke-width="1"/>
+    <path d="M604 57 l5 3 -5 3" fill="none" stroke="#58a6a6" stroke-width="1">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" begin="0s" repeatCount="indefinite"/>
+    </path>
+    <circle r="1.8" fill="#6f42c1">
+      <animate attributeName="cx" values="574;604" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="60;60" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.9;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <line x1="625" y1="60" x2="650" y2="60" stroke="#21262d" stroke-width="1"/>
+    <path d="M650 57 l5 3 -5 3" fill="none" stroke="#58a6a6" stroke-width="1">
+      <animate attributeName="opacity" values="0.2;1;0.2" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </path>
+    <circle r="1.8" fill="#58a6a6">
+      <animate attributeName="cx" values="625;650" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="60;60" dur="2s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.9;1" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
-  <!-- Deploy pipeline blocks scrolling -->
+  <!-- pod rectangles spinning up -->
   <g>
-    <rect x="-80" y="46" width="80" height="8" rx="4" fill="#7B42BC" opacity="0.85">
-      <animate attributeName="x" from="-80" to="900" dur="5.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.85;0.85;0" keyTimes="0;0.1;0.9;1" dur="5.5s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="-80" y="60" width="40" height="8" rx="4" fill="#326CE5" opacity="0.8">
-      <animate attributeName="x" from="-80" to="900" dur="7s" begin="1.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.8;0.8;0" keyTimes="0;0.1;0.9;1" dur="7s" begin="1.2s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="-80" y="74" width="120" height="8" rx="4" fill="#7B42BC" opacity="0.7">
-      <animate attributeName="x" from="-80" to="900" dur="9s" begin="2.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0.7;0.7;0" keyTimes="0;0.1;0.9;1" dur="9s" begin="2.5s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-
-  <!-- Status lights green/red toggling -->
-  <g transform="translate(640,30)">
-    <circle cx="0" cy="0" r="6" fill="#22c55e">
-      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="0" cy="0" r="6" fill="#ef4444" opacity="0">
-      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.45;0.5;0.95;1" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="22" cy="0" r="6" fill="#22c55e">
-      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.3;0.35;0.85;1" dur="4s" begin="0.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="22" cy="0" r="6" fill="#ef4444" opacity="0">
-      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.3;0.35;0.85;1" dur="4s" begin="0.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="44" cy="0" r="6" fill="#22c55e">
-      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.6;0.65;0.9;1" dur="5s" begin="1s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="44" cy="0" r="6" fill="#ef4444" opacity="0">
-      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.6;0.65;0.9;1" dur="5s" begin="1s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-
-  <!-- Alert bell with shake -->
-  <g transform="translate(740,30)">
-    <g>
-      <animateTransform attributeName="transform" type="rotate" values="-12;12;-12" keyTimes="0;0.5;1" dur="0.4s" repeatCount="indefinite"/>
-      <path d="M-8,6 Q-8,-10 0,-10 Q8,-10 8,6 Z" fill="#f59e0b" stroke="#d97706" stroke-width="1.5"/>
-      <rect x="-10" y="6" width="20" height="3" rx="1.5" fill="#f59e0b"/>
-      <circle cx="0" cy="11" r="3" fill="#f59e0b"/>
+    <text x="566" y="102" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" fill="#7d8590">pods</text>
+    <g transform="translate(610,92)">
+      <rect x="0" y="0" width="16" height="12" rx="2" fill="none" stroke="#6f42c1" stroke-width="1.2">
+        <animate attributeName="opacity" values="0.15;1;0.15" dur="4s" begin="0s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="24" y="0" width="16" height="12" rx="2" fill="none" stroke="#6f42c1" stroke-width="1.2">
+        <animate attributeName="opacity" values="0.15;1;0.15" dur="4s" begin="1s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="48" y="0" width="16" height="12" rx="2" fill="none" stroke="#6f42c1" stroke-width="1.2">
+        <animate attributeName="opacity" values="0.15;1;0.15" dur="4s" begin="2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="72" y="0" width="16" height="12" rx="2" fill="none" stroke="#58a6a6" stroke-width="1.2">
+        <animate attributeName="opacity" values="0.15;1;0.15" dur="4s" begin="3s" repeatCount="indefinite"/>
+      </rect>
+      <!-- spinner on active pod -->
+      <g transform="translate(8,6)">
+        <circle r="3" fill="none" stroke="#58a6a6" stroke-width="1" stroke-dasharray="3 4">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.5;1" dur="4s" repeatCount="indefinite"/>
+      </g>
     </g>
   </g>
 
-  <!-- K8s hexagon container icon -->
-  <g transform="translate(760,158)">
-    <polygon points="0,-18 15.6,-9 15.6,9 0,18 -15.6,9 -15.6,-9" fill="none" stroke="#326CE5" stroke-width="2">
-      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
-    </polygon>
-    <polygon points="0,-10 8.7,-5 8.7,5 0,10 -8.7,5 -8.7,-5" fill="#326CE5" opacity="0.25">
-      <animate attributeName="opacity" values="0.15;0.45;0.15" dur="3s" repeatCount="indefinite"/>
-    </polygon>
-    <text x="0" y="4" text-anchor="middle" fill="#326CE5" font-size="10" font-weight="700">k8s</text>
+  <!-- canary -> primary stages -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" text-anchor="middle">
+    <text x="566" y="132" fill="#7d8590" text-anchor="start">stages</text>
+    <rect x="612" y="122" width="42" height="14" rx="3" fill="none" stroke="#58a6a6" stroke-width="1.2">
+      <animate attributeName="stroke-opacity" values="1;0.25;1" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="633" y="132" fill="#58a6a6">
+      <animate attributeName="opacity" values="1;0.3;1" dur="6s" repeatCount="indefinite"/>
+      canary
+    </text>
+    <line x1="658" y1="129" x2="684" y2="129" stroke="#21262d" stroke-width="1"/>
+    <path d="M684 126 l5 3 -5 3" fill="none" stroke="#6f42c1" stroke-width="1">
+      <animate attributeName="opacity" values="0.25;1;0.25" dur="6s" repeatCount="indefinite"/>
+    </path>
+    <rect x="693" y="122" width="46" height="14" rx="3" fill="none" stroke="#6f42c1" stroke-width="1.2">
+      <animate attributeName="stroke-opacity" values="0.25;1;0.25" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="716" y="132" fill="#6f42c1">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="6s" repeatCount="indefinite"/>
+      primary
+    </text>
   </g>
 
-  <!-- Terraform logo blocks -->
-  <g transform="translate(808,148)">
-    <rect x="0" y="0" width="14" height="14" fill="#7B42BC" opacity="0.8"/>
-    <rect x="16" y="0" width="14" height="14" fill="#7B42BC" opacity="0.6"/>
-    <rect x="0" y="16" width="14" height="14" fill="#7B42BC" opacity="0.5"/>
+  <!-- rollout progress bar -->
+  <g>
+    <text x="566" y="160" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" fill="#7d8590" text-anchor="start">rollout</text>
+    <rect x="612" y="153" width="244" height="6" rx="3" fill="none" stroke="#21262d" stroke-width="1"/>
+    <rect x="613" y="154" height="4" rx="2" fill="url(#rollout)" width="0">
+      <animate attributeName="width" values="0;242;242;0" keyTimes="0;0.7;0.95;1" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="856" y="150" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" fill="#58a6a6">100%
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="6s" repeatCount="indefinite"/>
+    </text>
   </g>
 
-  <!-- Text -->
-  <text x="40" y="118" fill="#e6edf3" font-size="36" font-weight="700">Amara Justin</text>
-  <text x="42" y="148" fill="#7B42BC" font-size="18" font-weight="500">DevOps / IaC Engineer</text>
-  <text x="212" y="148" fill="#8b949e" font-size="15">&#183; Terraform &#183; Kubernetes &#183; Helm &#183; Lyon</text>
-
-  <!-- Blinking cursor -->
-  <rect x="40" y="156" width="10" height="20" fill="#326CE5">
-    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/>
+  <!-- blinking cursor -->
+  <rect x="830" y="180" width="7" height="12" fill="#6f42c1">
+    <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1" dur="1.2s" repeatCount="indefinite"/>
   </rect>
 </svg>
