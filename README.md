@@ -99,11 +99,11 @@ with real incidents, which is a lower bar than it sounds and also a real one.
 ## 📊 Activity
 
 <p align="center">
-  <img height="160" src="https://gh-profile-stats.zli39uclan.workers.dev/stats?username=aramisjustin068&hide_border=true"/>
-  <img height="160" src="https://gh-profile-stats.zli39uclan.workers.dev/top-langs?username=aramisjustin068&hide_border=true"/>
+  <img height="160" src="https://gh-profile-stats.zli39uclan.workers.dev/stats?username=aramisjustin068&accent=6f42c1&cell=square&hide_border=true"/>
+  <img height="160" src="https://gh-profile-stats.zli39uclan.workers.dev/top-langs?username=aramisjustin068&accent=6f42c1&cell=square&hide_border=true"/>
 </p>
 <p align="center">
-  <img width="720" src="https://gh-profile-stats.zli39uclan.workers.dev/activity?username=aramisjustin068&hide_border=true"/>
+  <img width="720" src="https://gh-profile-stats.zli39uclan.workers.dev/activity?username=aramisjustin068&accent=6f42c1&cell=square&hide_border=true"/>
 </p>
 
 ## Contact
