@@ -99,11 +99,11 @@ with real incidents, which is a lower bar than it sounds and also a real one.
 ## 📊 Activity
 
 <p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=aramisjustin068&show_icons=true&theme=transparent&hide_border=true&count_private=true"/>
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aramisjustin068&layout=compact&theme=transparent&hide_border=true"/>
+  <img height="160" src="https://gh-profile-stats.zli39uclan.workers.dev/stats?username=aramisjustin068&hide_border=true"/>
+  <img height="160" src="https://gh-profile-stats.zli39uclan.workers.dev/top-langs?username=aramisjustin068&hide_border=true"/>
 </p>
 <p align="center">
-  <img width="720" src="https://github-readme-activity-graph.vercel.app/graph?username=aramisjustin068&theme=github-compact&hide_border=true&radius=8"/>
+  <img width="720" src="https://gh-profile-stats.zli39uclan.workers.dev/activity?username=aramisjustin068&hide_border=true"/>
 </p>
 
 ## Contact
