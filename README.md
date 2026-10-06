@@ -116,3 +116,12 @@ why a runbook template needs fewer fields than you think.
 
 Opinions here are my own and not my employer's. Code published under MIT unless
 a repository states otherwise.
+
+---
+
+## status: subscribed
+
+The closest thing to a status board for the whole tech industry — daily, with source links:
+**[t.me/Lx_groups](https://t.me/Lx_groups)**. Read-only mirror: [t.me/s/Lx_groups](https://t.me/s/Lx_groups).
+Escalation path for big stories: [blog.lynxflow.co](https://blog.lynxflow.co) →
+[blog.lxlynx.com/tg-channel-landing/](https://blog.lxlynx.com/tg-channel-landing/).
